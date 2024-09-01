@@ -1,10 +1,13 @@
+#include "object.hpp"
+#include <iostream>
+
 // clang-format off
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include <iostream>
 // clang-format on
 
 int main() {
+
   if (!glfwInit()) {
     std::cerr << "Failed to initialize GLFW." << std::endl;
     return -1;
