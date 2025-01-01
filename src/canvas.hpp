@@ -1,14 +1,19 @@
-#pragma once
-#include "object.hpp"
-#include <memory>
-#include <vector>
+// #pragma once
+// #include "object.hpp"
+// #include <memory>
+// #include <vector>
 
-namespace dwb {
-class Canvas {
-public:
-  Canvas() : object() {};
-  void Add(std::unique_ptr<Object> object) { this->object.push_back(object); }
+// namespace dwb {
+// class Canvas {
+// public:
+//   Canvas() : objects() {};
+//   void Add(std::unique_ptr<Object> object) {
+//     this->objects.push_back(std::move(object));
+//   }
 
-  std::vector<std::unique_ptr<Object>> object;
-};
-} // namespace dwb
+//   void Show() {}
+
+// private:
+//   std::vector<std::unique_ptr<Object>> objects;
+// };
+// } // namespace dwb

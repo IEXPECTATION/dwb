@@ -10,5 +10,11 @@ public:
     this->canvas.push_back(canvas);
   }
 
+  void Show() {
+    // TODO: Engine should select a canvas to show.
+    canvas[0]->Show();
+  }
+
+private:
   std::vector<std::shared_ptr<dwb::Canvas>> canvas;
 };

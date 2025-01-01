@@ -1,4 +1,4 @@
-#include "object.hpp"
+#include "canvas.hpp"
 #include <iostream>
 
 // clang-format off
@@ -7,7 +7,6 @@
 // clang-format on
 
 int main() {
-
   if (!glfwInit()) {
     std::cerr << "Failed to initialize GLFW." << std::endl;
     return -1;
@@ -32,7 +31,11 @@ int main() {
   }
 
   while (!glfwWindowShouldClose(window)) {
+    glClearColor(.0f, .0f, .0f, 1.0f); // set clear color to black
     glClear(GL_COLOR_BUFFER_BIT);
+
+    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, true);
 
     glfwSwapBuffers(window);
     glfwPollEvents();
